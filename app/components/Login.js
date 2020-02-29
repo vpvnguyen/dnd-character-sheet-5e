@@ -1,26 +1,36 @@
+import Link from 'next/link'
+
 const Login = () => (
     <>
         <div className="container">
+
             <h1>Login Screen</h1>
             <div className="login-buttons">
-                <button onClick={goLogin}>login</button>
-                <button onClick={registerUser}>register</button>
+                
+                <Link href='/Dashboard'>
+                    <button>login</button>
+                </Link>
+
+                <Link href='/Register'>
+                    <button>register</button>
+                </Link>
+                
             </div>
 
         </div>
 
         <style jsx>{`
-    .container {
-        text-align: center;
-    }
-    .login-buttons {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        width: 100px;
-    }
+            .container {
+                text-align: center;
+            }
+            .login-buttons {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                width: 100px;
+            }
 
-`}</style>
+        `}</style>
     </>
 );
 
