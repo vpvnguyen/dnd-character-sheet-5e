@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Nav from '../components/nav'
 import Login from '../components/Login'
+import SignIn from './SignIn';
 
 const Home = () => (
   <>
@@ -12,9 +13,10 @@ const Home = () => (
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     </Head>
 
-    <Nav />
+    {/* <Nav /> */}
   
-  <Login />
+  {/* <Login /> */}
+  <SignIn />
 </>
 )
 
