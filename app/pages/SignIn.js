@@ -97,6 +97,7 @@ export default function SignIn() {
             variant="contained"
             color="primary"
             className={classes.submit}
+            href="/Dashboard" //  REPLACE WITH AUTH
           >
             Sign In
           </Button>
