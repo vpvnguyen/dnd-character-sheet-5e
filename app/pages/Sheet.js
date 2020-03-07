@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
     padding: theme.spacing(2) // veritcal padding between cards
   },
   divider: {
-    margin: "20px"
+    margin: "15px"
   }
 }));
 
@@ -37,58 +37,56 @@ export default function Sheet() {
         <Typography variant="subtitle1" gutterBottom>
           Character Sheet 5e
         </Typography>
+
         <Divider className={classes.divider} />
         <Grid container spacing={3}>
-          <Grid item>
-            <Avatar>A</Avatar>
+          <Grid item xs>
+            <FormControl>
+              <InputLabel>Name</InputLabel>
+              <Input fullWidth placeholder="Name" />
+            </FormControl>
+          </Grid>
+          <Grid item xs>
+            <Grid item xs>
+              <FormControl>
+                <InputLabel>Class</InputLabel>
+                <Input fullWidth placeholder="Class" />
+              </FormControl>
+            </Grid>
           </Grid>
 
           <Grid item xs>
             <FormControl>
-              <InputLabel>Character Name</InputLabel>
-              <Input fullWidth placeholder="Character Name" />
+              <InputLabel>Level</InputLabel>
+              <Input fullWidth placeholder="Level" />
             </FormControl>
           </Grid>
         </Grid>
 
-        <Grid item xs>
+        <Grid container spacing={3}>
           <Grid item xs>
             <FormControl>
-              <InputLabel>Class</InputLabel>
-              <Input fullWidth placeholder="Class" />
+              <InputLabel>Alignment</InputLabel>
+              <Input fullWidth placeholder="Alignment" />
+            </FormControl>
+          </Grid>
+
+          <Grid item xs>
+            <FormControl>
+              <InputLabel>Race</InputLabel>
+              <Input fullWidth placeholder="Race" />
+            </FormControl>
+          </Grid>
+
+          <Grid item xs>
+            <FormControl>
+              <InputLabel>Sex</InputLabel>
+              <Input fullWidth placeholder="Sex" />
             </FormControl>
           </Grid>
         </Grid>
 
-        <Grid item xs>
-          <FormControl>
-            <InputLabel>Level</InputLabel>
-            <Input fullWidth placeholder="Level" />
-          </FormControl>
-        </Grid>
-
-        <Grid item xs>
-          <FormControl>
-            <InputLabel>Alignment</InputLabel>
-            <Input fullWidth placeholder="Alignment" />
-          </FormControl>
-        </Grid>
-
-        <Grid item xs>
-          <FormControl>
-            <InputLabel>Race</InputLabel>
-            <Input fullWidth placeholder="Race" />
-          </FormControl>
-        </Grid>
-
-        <Grid item xs>
-          <FormControl>
-            <InputLabel>Sex</InputLabel>
-            <Input fullWidth placeholder="Sex" />
-          </FormControl>
-        </Grid>
-
-        <Grid item xs>
+        <Grid>
           <FormControl>
             <InputLabel>Description</InputLabel>
             <Input fullWidth placeholder="Description" />
