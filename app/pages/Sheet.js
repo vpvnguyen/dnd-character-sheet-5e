@@ -85,8 +85,8 @@ const alignments = [
 
 export default function Sheet() {
   const classes = useStyles();
-  const [sex, setSex] = React.useState("");
-  const [alignment, setAlignment] = React.useState("");
+  const [sex, setSex] = useState("");
+  const [alignment, setAlignment] = useState("");
 
   const handleSexChange = event => {
     setSex(event.target.value);
