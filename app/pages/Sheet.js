@@ -1,14 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Paper from "@material-ui/core/Paper";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
-import Avatar from "@material-ui/core/Avatar";
 import {
   Typography,
   Divider,
   InputLabel,
   Input,
-  FormControl
+  FormControl,
+  TextField,
+  MenuItem
 } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
@@ -28,8 +29,74 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
+const sexes = [
+  {
+    value: "Male",
+    label: "Male"
+  },
+  {
+    value: "Female",
+    label: "Female"
+  },
+  {
+    value: "Neutral",
+    label: "Neutral"
+  }
+];
+
+const alignments = [
+  {
+    value: "LawfulGood",
+    label: "Lawful Good"
+  },
+  {
+    value: "NeutralGood",
+    label: "Neutral Good"
+  },
+  {
+    value: "LawfulGood",
+    label: "Lawful Good"
+  },
+  {
+    value: "ChaoticGood",
+    label: "Chaotic Good"
+  },
+  {
+    value: "LawfulNeutral",
+    label: "Lawful Neutral"
+  },
+  {
+    value: "Neutral",
+    label: "Neutral"
+  },
+  {
+    value: "ChaoticNeutral",
+    label: "Chaotic Neutral"
+  },
+  {
+    value: "LawfulEvil",
+    label: "Lawful Evil"
+  },
+  {
+    value: "NeutralEvil",
+    label: "Neutral Evil"
+  }
+];
+
 export default function Sheet() {
   const classes = useStyles();
+  const [sex, setSex] = React.useState("");
+  const [alignment, setAlignment] = React.useState("");
+
+  const handleSexChange = event => {
+    setSex(event.target.value);
+    console.log(event.target.value);
+  };
+
+  const handleAlignmentChange = event => {
+    setAlignment(event.target.value);
+    console.log(event.target.value);
+  };
 
   return (
     <div className={classes.root}>
@@ -91,6 +158,40 @@ export default function Sheet() {
             <InputLabel>Description</InputLabel>
             <Input fullWidth placeholder="Description" />
           </FormControl>
+        </Grid>
+
+        <Grid item xs>
+          <TextField
+            id="sex"
+            select
+            label="Sex"
+            value={sex}
+            onChange={handleSexChange}
+            helperText="Select characer sex"
+          >
+            {sexes.map(option => (
+              <MenuItem key={option.value} value={option.value}>
+                {option.label}
+              </MenuItem>
+            ))}
+          </TextField>
+        </Grid>
+
+        <Grid item xs>
+          <TextField
+            id="character-alignment"
+            select
+            label="Alignment"
+            value={alignment}
+            onChange={handleAlignmentChange}
+            helperText="Select Alignment"
+          >
+            {alignments.map((res, index) => (
+              <MenuItem key={`alignment-${index}`} value={res.value}>
+                {res.label}
+              </MenuItem>
+            ))}
+          </TextField>
         </Grid>
       </Paper>
     </div>
