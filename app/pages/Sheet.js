@@ -29,7 +29,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const sexes = [
+const charSexes = [
   {
     value: "Male",
     label: "Male"
@@ -44,7 +44,7 @@ const sexes = [
   }
 ];
 
-const alignments = [
+const charAlignments = [
   {
     value: "LawfulGood",
     label: "Lawful Good"
@@ -85,16 +85,46 @@ const alignments = [
 
 export default function Sheet() {
   const classes = useStyles();
-  const [sex, setSex] = useState("");
-  const [alignment, setAlignment] = useState("");
+  const [charName, setCharName] = useState("");
+  const [charClass, setCharClass] = useState("");
+  const [charLevel, setCharLevel] = useState("");
+  const [charAlignment, setCharAlignment] = useState("");
+  const [charRace, setCharRace] = useState("");
+  const [charSex, setCharSex] = useState("");
+  const [charDesc, setCharDesc] = useState("");
 
-  const handleSexChange = event => {
-    setSex(event.target.value);
+  const handleCharNameChange = event => {
+    setCharName(event.target.value);
     console.log(event.target.value);
   };
 
-  const handleAlignmentChange = event => {
-    setAlignment(event.target.value);
+  const handleCharClassChange = event => {
+    setCharClass(event.target.value);
+    console.log(event.target.value);
+  };
+
+  const handleCharLevelChange = event => {
+    setCharLevel(event.target.value);
+    console.log(event.target.value);
+  };
+
+  const handleCharAlignmentChange = event => {
+    setCharAlignment(event.target.value);
+    console.log(event.target.value);
+  };
+
+  const handleCharRaceChange = event => {
+    setCharRace(event.target.value);
+    console.log(event.target.value);
+  };
+
+  const handleCharSexChange = event => {
+    setCharSex(event.target.value);
+    console.log(event.target.value);
+  };
+
+  const handleCharDescChange = event => {
+    setCharDesc(event.target.value);
     console.log(event.target.value);
   };
 
@@ -110,14 +140,22 @@ export default function Sheet() {
           <Grid item xs>
             <FormControl>
               <InputLabel>Name</InputLabel>
-              <Input fullWidth placeholder="Name" />
+              <Input
+                fullWidth
+                placeholder="Name"
+                onChange={handleCharNameChange}
+              />
             </FormControl>
           </Grid>
           <Grid item xs>
             <Grid item xs>
               <FormControl>
                 <InputLabel>Class</InputLabel>
-                <Input fullWidth placeholder="Class" />
+                <Input
+                  fullWidth
+                  placeholder="Class"
+                  onChange={handleCharClassChange}
+                />
               </FormControl>
             </Grid>
           </Grid>
@@ -125,7 +163,11 @@ export default function Sheet() {
           <Grid item xs>
             <FormControl>
               <InputLabel>Level</InputLabel>
-              <Input fullWidth placeholder="Level" />
+              <Input
+                fullWidth
+                placeholder="Level"
+                onChange={handleCharLevelChange}
+              />
             </FormControl>
           </Grid>
         </Grid>
@@ -141,7 +183,11 @@ export default function Sheet() {
           <Grid item xs>
             <FormControl>
               <InputLabel>Race</InputLabel>
-              <Input fullWidth placeholder="Race" />
+              <Input
+                fullWidth
+                placeholder="Race"
+                onChange={handleCharRaceChange}
+              />
             </FormControl>
           </Grid>
 
@@ -162,14 +208,13 @@ export default function Sheet() {
 
         <Grid item xs>
           <TextField
-            id="sex"
+            id="char-sex"
             select
             label="Sex"
-            value={sex}
-            onChange={handleSexChange}
+            onChange={handleCharSexChange}
             helperText="Select characer sex"
           >
-            {sexes.map(option => (
+            {charSexes.map(option => (
               <MenuItem key={option.value} value={option.value}>
                 {option.label}
               </MenuItem>
@@ -179,14 +224,13 @@ export default function Sheet() {
 
         <Grid item xs>
           <TextField
-            id="character-alignment"
+            id="char-alignment"
             select
             label="Alignment"
-            value={alignment}
-            onChange={handleAlignmentChange}
+            onChange={handleCharAlignmentChange}
             helperText="Select Alignment"
           >
-            {alignments.map((res, index) => (
+            {charAlignments.map((res, index) => (
               <MenuItem key={`alignment-${index}`} value={res.value}>
                 {res.label}
               </MenuItem>
