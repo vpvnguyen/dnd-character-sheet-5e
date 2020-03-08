@@ -136,6 +136,7 @@ export default function Sheet() {
         </Typography>
 
         <Divider className={classes.divider} />
+
         <Grid container spacing={3}>
           <Grid item xs>
             <FormControl>
@@ -147,6 +148,7 @@ export default function Sheet() {
               />
             </FormControl>
           </Grid>
+
           <Grid item xs>
             <Grid item xs>
               <FormControl>
@@ -214,9 +216,9 @@ export default function Sheet() {
             onChange={handleCharSexChange}
             helperText="Select characer sex"
           >
-            {charSexes.map(option => (
-              <MenuItem key={option.value} value={option.value}>
-                {option.label}
+            {charSexes.map((val, index) => (
+              <MenuItem key={`char-sex-${index}`} value={val.value}>
+                {val.label}
               </MenuItem>
             ))}
           </TextField>
@@ -230,9 +232,9 @@ export default function Sheet() {
             onChange={handleCharAlignmentChange}
             helperText="Select Alignment"
           >
-            {charAlignments.map((res, index) => (
-              <MenuItem key={`alignment-${index}`} value={res.value}>
-                {res.label}
+            {charAlignments.map((val, index) => (
+              <MenuItem key={`char-alignment-${index}`} value={val.value}>
+                {val.label}
               </MenuItem>
             ))}
           </TextField>
