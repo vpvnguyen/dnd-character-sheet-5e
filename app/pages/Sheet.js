@@ -178,12 +178,6 @@ export default function Sheet() {
         </Grid>
 
         <Grid container spacing={3}>
-          {/* <Grid item xs>
-            <FormControl>
-              <InputLabel>Alignment</InputLabel>
-              <Input fullWidth placeholder="Alignment" />
-            </FormControl>
-          </Grid> */}
           <Grid item xs>
             <TextField
               id="char-alignment"
@@ -213,12 +207,6 @@ export default function Sheet() {
             </FormControl>
           </Grid>
 
-          {/* <Grid item xs>
-            <FormControl>
-              <InputLabel>Sex</InputLabel>
-              <Input fullWidth placeholder="Sex" />
-            </FormControl>
-          </Grid> */}
           <Grid item xs>
             <TextField
               id="char-sex"
