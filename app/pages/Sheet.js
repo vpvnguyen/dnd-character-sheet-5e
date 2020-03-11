@@ -144,6 +144,7 @@ export default function Sheet() {
               <Input
                 fullWidth
                 placeholder="Name"
+                value={charName}
                 onChange={handleCharNameChange}
               />
             </FormControl>
@@ -156,6 +157,7 @@ export default function Sheet() {
                 <Input
                   fullWidth
                   placeholder="Class"
+                  value={charClass}
                   onChange={handleCharClassChange}
                 />
               </FormControl>
@@ -168,6 +170,7 @@ export default function Sheet() {
               <Input
                 fullWidth
                 placeholder="Level"
+                value={charLevel}
                 onChange={handleCharLevelChange}
               />
             </FormControl>
@@ -175,11 +178,27 @@ export default function Sheet() {
         </Grid>
 
         <Grid container spacing={3}>
-          <Grid item xs>
+          {/* <Grid item xs>
             <FormControl>
               <InputLabel>Alignment</InputLabel>
               <Input fullWidth placeholder="Alignment" />
             </FormControl>
+          </Grid> */}
+          <Grid item xs>
+            <TextField
+              id="char-alignment"
+              select
+              label="Alignment"
+              value={charAlignment}
+              onChange={handleCharAlignmentChange}
+              helperText="Select Alignment"
+            >
+              {charAlignments.map((val, index) => (
+                <MenuItem key={`char-alignment-${index}`} value={val.value}>
+                  {val.label}
+                </MenuItem>
+              ))}
+            </TextField>
           </Grid>
 
           <Grid item xs>
@@ -188,56 +207,46 @@ export default function Sheet() {
               <Input
                 fullWidth
                 placeholder="Race"
+                value={charRace}
                 onChange={handleCharRaceChange}
               />
             </FormControl>
           </Grid>
 
-          <Grid item xs>
+          {/* <Grid item xs>
             <FormControl>
               <InputLabel>Sex</InputLabel>
               <Input fullWidth placeholder="Sex" />
             </FormControl>
+          </Grid> */}
+          <Grid item xs>
+            <TextField
+              id="char-sex"
+              select
+              label="Sex"
+              value={charSex}
+              onChange={handleCharSexChange}
+              helperText="Select characer sex"
+            >
+              {charSexes.map((val, index) => (
+                <MenuItem key={`char-sex-${index}`} value={val.value}>
+                  {val.label}
+                </MenuItem>
+              ))}
+            </TextField>
           </Grid>
         </Grid>
 
         <Grid>
           <FormControl>
             <InputLabel>Description</InputLabel>
-            <Input fullWidth placeholder="Description" />
+            <Input
+              fullWidth
+              placeholder="Description"
+              value={charDesc}
+              onChange={handleCharDescChange}
+            />
           </FormControl>
-        </Grid>
-
-        <Grid item xs>
-          <TextField
-            id="char-sex"
-            select
-            label="Sex"
-            onChange={handleCharSexChange}
-            helperText="Select characer sex"
-          >
-            {charSexes.map((val, index) => (
-              <MenuItem key={`char-sex-${index}`} value={val.value}>
-                {val.label}
-              </MenuItem>
-            ))}
-          </TextField>
-        </Grid>
-
-        <Grid item xs>
-          <TextField
-            id="char-alignment"
-            select
-            label="Alignment"
-            onChange={handleCharAlignmentChange}
-            helperText="Select Alignment"
-          >
-            {charAlignments.map((val, index) => (
-              <MenuItem key={`char-alignment-${index}`} value={val.value}>
-                {val.label}
-              </MenuItem>
-            ))}
-          </TextField>
         </Grid>
       </Paper>
     </div>
