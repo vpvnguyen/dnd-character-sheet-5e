@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Paper from "@material-ui/core/Paper";
-import { makeStyles } from "@material-ui/core/styles";
-import Grid from "@material-ui/core/Grid";
 import {
+  makeStyles,
+  Grid,
+  Paper,
   Typography,
   Divider,
   InputLabel,
