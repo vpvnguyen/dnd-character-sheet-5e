@@ -83,7 +83,7 @@ const charAlignments = [
   }
 ];
 
-export default function Sheet() {
+const CharHeader = () => {
   const classes = useStyles();
   const [charName, setCharName] = useState("");
   const [charClass, setCharClass] = useState("");
@@ -214,7 +214,7 @@ export default function Sheet() {
               label="Sex"
               value={charSex}
               onChange={handleCharSexChange}
-              helperText="Select characer sex"
+              helperText="Select character sex"
             >
               {charSexes.map((val, index) => (
                 <MenuItem key={`char-sex-${index}`} value={val.value}>
@@ -239,4 +239,6 @@ export default function Sheet() {
       </Paper>
     </div>
   );
-}
+};
+
+export default CharHeader;
