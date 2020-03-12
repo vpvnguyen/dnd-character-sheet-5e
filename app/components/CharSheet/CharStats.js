@@ -86,7 +86,7 @@ const CharStats = () => {
         <Grid container spacing={3}>
           <Grid item xs>
             <FormControl>
-              <InputLabel>Name</InputLabel>
+              <InputLabel>STRENGTH </InputLabel>
               <Input fullWidth placeholder="Name" />
             </FormControl>
           </Grid>
@@ -94,7 +94,7 @@ const CharStats = () => {
           <Grid item xs>
             <Grid item xs>
               <FormControl>
-                <InputLabel>Class</InputLabel>
+                <InputLabel>DEXTERITY</InputLabel>
                 <Input fullWidth placeholder="Class" />
               </FormControl>
             </Grid>
@@ -102,15 +102,16 @@ const CharStats = () => {
 
           <Grid item xs>
             <FormControl>
-              <InputLabel>Level</InputLabel>
+              <InputLabel>CONSTITUTION</InputLabel>
               <Input fullWidth placeholder="Level" />
             </FormControl>
           </Grid>
-          <Typography>
-            // STATS // STRENGTH // DEXTERITY // CONSTITUTION // INTELLIGENCE //
-            WISDOM // CHARISMA
-          </Typography>
         </Grid>
+        <Divider className={classes.divider} />
+        <Typography>
+          // STATS // STRENGTH // DEXTERITY // CONSTITUTION // INTELLIGENCE //
+          WISDOM // CHARISMA
+        </Typography>
       </Paper>
     </div>
   );
