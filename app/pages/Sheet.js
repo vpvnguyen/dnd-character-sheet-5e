@@ -54,10 +54,6 @@ const charAlignments = [
     label: "Neutral Good"
   },
   {
-    value: "LawfulGood",
-    label: "Lawful Good"
-  },
-  {
     value: "ChaoticGood",
     label: "Chaotic Good"
   },
@@ -80,6 +76,10 @@ const charAlignments = [
   {
     value: "NeutralEvil",
     label: "Neutral Evil"
+  },
+  {
+    value: "ChaoticEvil",
+    label: "Chaotic Evil"
   }
 ];
 
