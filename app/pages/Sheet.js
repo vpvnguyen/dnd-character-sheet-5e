@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import CharHeader from "../components/CharSheet/CharHeader";
+import CharStats from "../components/CharSheet/CharStats";
 
 const Sheet = () => (
   <>
@@ -18,6 +19,7 @@ const Sheet = () => (
     </Head>
 
     <CharHeader />
+    <CharStats />
   </>
 );
 
