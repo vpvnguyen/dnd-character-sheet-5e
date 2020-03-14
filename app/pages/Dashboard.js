@@ -3,6 +3,7 @@ import Link from "next/link";
 import Layout from "../components/Layout";
 
 import fetch from "isomorphic-unfetch";
+import charSheetAPI from "../utils/charSheet.API";
 
 const Dashboard = props => (
   <Layout>
@@ -16,15 +17,10 @@ const Dashboard = props => (
         </li>
       ))}
     </ul>
-    <div>
-      {/* {props.users.map(user => (
-        <li key={user.id}>
-          <Link href="/p/[id]" as={`/p/${user.id}`}>
-            <a>Username: {user.name}</a>
-          </Link>
-        </li>
-      ))} */}
-    </div>
+
+    <div>{props.string}</div>
+    <div>{props.getCharData}</div>
+
     <div>
       <Link href="/Sheet">
         <button>character sheet</button>
@@ -34,15 +30,21 @@ const Dashboard = props => (
 );
 
 // fetch data from charSheets API
-Dashboard.getInitialProps = async function() {
+Dashboard.getInitialProps = async () => {
   const res = await fetch("https://api.tvmaze.com/search/shows?q=batman");
 
   //   const res = await fetch("http://localhost:3001/getChar");
   const data = await res.json();
-
   console.log(`Show data fetched. Count: ${data.length}`);
 
-  return { shows: data.map(entry => entry.show) };
+  const getCharData = await charSheetAPI
+    .getChar()
+    .catch(err => console.log(err))
+    .then(logging => logging.data.getChar);
+  // .then(result => result.data);
+
+  const string = "string";
+  return { shows: data.map(entry => entry.show), string, getCharData };
 };
 
 export default Dashboard;
