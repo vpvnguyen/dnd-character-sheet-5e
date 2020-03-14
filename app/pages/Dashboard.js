@@ -2,6 +2,8 @@ import React from "react";
 import Link from "next/link";
 import Layout from "../components/Layout";
 import ThemeSwitch from "../test/ThemeSwitch";
+import ExampleTable from "../test/ExampleTable";
+
 import fetch from "isomorphic-unfetch";
 import charSheetAPI from "../utils/charSheet.API";
 
@@ -27,6 +29,7 @@ const Dashboard = props => (
         <button>character sheet</button>
       </Link>
     </div>
+    <ExampleTable />
   </Layout>
 );
 
