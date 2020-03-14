@@ -56,9 +56,7 @@ import {
   Divider,
   InputLabel,
   Input,
-  FormControl,
-  TextField,
-  MenuItem
+  FormControl
 } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
