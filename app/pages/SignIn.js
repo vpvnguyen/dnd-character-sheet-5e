@@ -1,6 +1,6 @@
 import React from "react";
 
-import Layout from "../components/Layout";
+import Header from "../components/Header";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
@@ -51,7 +51,8 @@ export default function SignIn() {
   const classes = useStyles();
 
   return (
-    <Layout>
+    <>
+      <Header />
       <Container component="main" maxWidth="xs">
         <div className={classes.paper}>
           <Avatar className={classes.avatar}>
@@ -118,6 +119,6 @@ export default function SignIn() {
           <Copyright />
         </Box>
       </Container>
-    </Layout>
+    </>
   );
 }
