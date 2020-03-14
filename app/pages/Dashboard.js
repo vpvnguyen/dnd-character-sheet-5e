@@ -1,12 +1,13 @@
 import React from "react";
 import Link from "next/link";
 import Layout from "../components/Layout";
-
+import ThemeSwitch from "../test/ThemeSwitch";
 import fetch from "isomorphic-unfetch";
 import charSheetAPI from "../utils/charSheet.API";
 
 const Dashboard = props => (
   <Layout>
+    <ThemeSwitch />
     <div>User's dashboard</div>
     <ul>
       {props.shows.map(show => (
