@@ -1,15 +1,11 @@
 import React from "react";
 
-import Layout from "../components/Layout";
-import Nav from "../components/nav";
-import Login from "../components/Login";
+import Header from "../components/Header";
 import SignIn from "./SignIn";
 
 const Home = () => (
   <>
-    {/* <Nav /> */}
-
-    {/* <Login /> */}
+    <Header />
     <SignIn />
   </>
 );
