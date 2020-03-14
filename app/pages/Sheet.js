@@ -6,9 +6,10 @@ import CharStats from "../components/CharSheet/CharStats";
 
 const Sheet = () => (
   <>
-    <Layout />
-    <CharHeader />
-    <CharStats />
+    <Layout>
+      <CharHeader />
+      <CharStats />
+    </Layout>
   </>
 );
 
