@@ -1,8 +1,8 @@
-import { CssBaseline, Grid } from "@material-ui/core";
+import { CssBaseline, Grid, Paper } from "@material-ui/core";
 import Header from "./Header";
 
 const layoutStyle = {
-  //   margin: "auto",
+  margin: "25px",
   //   padding: 20,
   //   border: "1px solid #DDD"
   display: "flex",
@@ -12,15 +12,17 @@ const layoutStyle = {
 };
 
 const Layout = props => (
-  <div style={layoutStyle}>
+  <>
     <CssBaseline />
-    <Header />
-    <Grid item xs>
-      {/* If you remove {props.children}, the Layout cannot render the content inside the Layout element wrapped in other components. */}
-      {props.children}
-      {props.content}
-    </Grid>
-  </div>
+    <Paper style={layoutStyle}>
+      <Header />
+      <Grid item xs>
+        {/* If you remove {props.children}, the Layout cannot render the content inside the Layout element wrapped in other components. */}
+        {props.children}
+        {props.content}
+      </Grid>
+    </Paper>
+  </>
 );
 
 export default Layout;
