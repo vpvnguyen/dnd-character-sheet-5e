@@ -7,8 +7,6 @@ import SignIn from "./SignIn";
 
 const Home = () => (
   <>
-    <Layout />
-
     {/* <Nav /> */}
 
     {/* <Login /> */}
