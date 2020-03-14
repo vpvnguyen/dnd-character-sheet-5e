@@ -1,5 +1,6 @@
 import { CssBaseline, Grid } from "@material-ui/core";
 import Header from "./Header";
+import NavBar from "./NavBar/NavBar";
 
 const layoutStyle = {
   margin: "15px",
@@ -17,9 +18,9 @@ const Layout = props => (
     <CssBaseline />
     <Header />
     <Grid style={layoutStyle}>
-      {/* If you remove {props.children}, the Layout cannot render the content inside the Layout element wrapped in other components. */}
+      <NavBar />
+      {/* {props.children} renders the content inside the Layout element wrapped in other components. */}
       {props.children}
-      {props.content}
     </Grid>
   </>
 );
