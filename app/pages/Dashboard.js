@@ -1,15 +1,15 @@
 import React from "react";
 import Link from "next/link";
 import Layout from "../components/Layout";
-import ThemeSwitch from "../test/ThemeSwitch";
-import ExampleTable from "../test/ExampleTable";
+// import ThemeSwitch from "../test/ThemeSwitch";
+// import ExampleTable from "../test/ExampleTable";
 
 import fetch from "isomorphic-unfetch";
-import charSheetAPI from "../utils/charSheet.API";
+// import charSheetAPI from "../utils/charSheet.API";
 
 const Dashboard = props => (
   <Layout>
-    <ThemeSwitch />
+    {/* <ThemeSwitch /> */}
     <div>User's dashboard</div>
     <ul>
       {props.shows.map(show => (
@@ -29,7 +29,7 @@ const Dashboard = props => (
         <button>character sheet</button>
       </Link>
     </div>
-    <ExampleTable />
+    {/* <ExampleTable /> */}
   </Layout>
 );
 
@@ -41,14 +41,16 @@ Dashboard.getInitialProps = async () => {
   const data = await res.json();
   console.log(`Show data fetched. Count: ${data.length}`);
 
-  const getCharData = await charSheetAPI
-    .getChar()
-    .catch(err => console.log(err))
-    .then(logging => logging.data.getChar);
+  // const getCharData = await charSheetAPI
+  //   .getChar()
+  //   .catch(err => console.log(err))
+  //   .then(logging => logging.data.getChar);
   // .then(result => result.data);
 
   const string = "string";
-  return { shows: data.map(entry => entry.show), string, getCharData };
+  // return { shows: data.map(entry => entry.show), string, getCharData };
+  return { shows: data.map(entry => entry.show), string };
+
 };
 
 export default Dashboard;
