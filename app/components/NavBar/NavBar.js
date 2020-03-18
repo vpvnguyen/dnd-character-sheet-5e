@@ -1,5 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 
+// mainbar icons
+import MenuIcon from "@material-ui/icons/Menu";
+import AccountCircle from "@material-ui/icons/AccountCircle";
+import MailIcon from "@material-ui/icons/Mail";
+import NotificationsIcon from "@material-ui/icons/Notifications";
+import MoreIcon from "@material-ui/icons/MoreVert";
+
+// drawer icons
+import InboxIcon from "@material-ui/icons/MoveToInbox";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+
+// navbar
 import { fade, makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -8,13 +20,9 @@ import Typography from "@material-ui/core/Typography";
 import Badge from "@material-ui/core/Badge";
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
-import MenuIcon from "@material-ui/icons/Menu";
-import AccountCircle from "@material-ui/icons/AccountCircle";
-import MailIcon from "@material-ui/icons/Mail";
-import NotificationsIcon from "@material-ui/icons/Notifications";
-import MoreIcon from "@material-ui/icons/MoreVert";
 
-import NavBarDrawer from "./NavBarDrawer";
+// import drawer
+import { Drawer, List, Divider, ListItem, ListItemText } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
   grow: {
@@ -75,17 +83,75 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up("md")]: {
       display: "none"
     }
+  },
+  // drawer
+  list: {
+    width: 250
+  },
+  fullList: {
+    width: "auto"
   }
 }));
 
-export default function PrimarySearchAppBar() {
+
+const NavBar = () => {
   const classes = useStyles();
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
+
+  // mainbar
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
 
   const isMenuOpen = Boolean(anchorEl);
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
+  // drawer
+const [drawer, setDrawer] = useState({
+  left: false
+});
+
+const toggleDrawer = (side, open) => event => {
+  if (
+    event.type === "keydown" &&
+    (event.key === "Tab" || event.key === "Shift")
+  ) {
+    return;
+  }
+
+  setDrawer({ ...drawer, [side]: open });
+};
+
+const sideList = side => (
+  <div
+    className={classes.list}
+    role="presentation"
+    onClick={toggleDrawer(side, false)}
+    onKeyDown={toggleDrawer(side, false)}
+  >
+    <List>
+      {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+        <ListItem button key={text}>
+          <ListItemIcon>
+            {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+          </ListItemIcon>
+          <ListItemText primary={text} />
+        </ListItem>
+      ))}
+    </List>
+    <Divider />
+    <List>
+      {["All mail", "Trash", "Spam"].map((text, index) => (
+        <ListItem button key={text}>
+          <ListItemIcon>
+            {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+          </ListItemIcon>
+          <ListItemText primary={text} />
+        </ListItem>
+      ))}
+    </List>
+  </div>
+);
+
+// mainbar handlers
   const handleProfileMenuOpen = event => {
     setAnchorEl(event.currentTarget);
   };
@@ -104,6 +170,8 @@ export default function PrimarySearchAppBar() {
   };
 
   const menuId = "primary-search-account-menu";
+
+  // renders right icon submenu 
   const renderMenu = (
     <Menu
       anchorEl={anchorEl}
@@ -162,7 +230,9 @@ export default function PrimarySearchAppBar() {
 
   return (
     <div className={classes.grow}>
-      <NavBarDrawer />
+      <Drawer open={drawer.left} onClose={toggleDrawer("left", false)}>
+        {sideList("left")}
+      </Drawer>
       <AppBar position="static">
         <Toolbar>
           <IconButton
@@ -170,8 +240,10 @@ export default function PrimarySearchAppBar() {
             className={classes.menuButton}
             color="inherit"
             aria-label="open drawer"
+            onClick={toggleDrawer("left", true)}
           >
             <MenuIcon />
+
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
             D&D Character Sheet
@@ -217,4 +289,6 @@ export default function PrimarySearchAppBar() {
       {renderMenu}
     </div>
   );
-}
+};
+
+export default NavBar;
