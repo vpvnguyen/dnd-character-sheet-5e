@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-// mainbar icons
+// navbar icons
 import MenuIcon from "@material-ui/icons/Menu";
 import AccountCircle from "@material-ui/icons/AccountCircle";
 import MailIcon from "@material-ui/icons/Mail";
@@ -22,7 +22,13 @@ import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 
 // import drawer
-import { Drawer, List, Divider, ListItem, ListItemText } from '@material-ui/core'
+import {
+  Drawer,
+  List,
+  Divider,
+  ListItem,
+  ListItemText
+} from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
   grow: {
@@ -93,11 +99,10 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-
 const NavBar = () => {
   const classes = useStyles();
 
-  // mainbar
+  // navbar
   const [anchorEl, setAnchorEl] = useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
 
@@ -105,53 +110,53 @@ const NavBar = () => {
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl);
 
   // drawer
-const [drawer, setDrawer] = useState({
-  left: false
-});
+  const [drawer, setDrawer] = useState({
+    left: false
+  });
 
-const toggleDrawer = (side, open) => event => {
-  if (
-    event.type === "keydown" &&
-    (event.key === "Tab" || event.key === "Shift")
-  ) {
-    return;
-  }
+  const toggleDrawer = (side, open) => event => {
+    if (
+      event.type === "keydown" &&
+      (event.key === "Tab" || event.key === "Shift")
+    ) {
+      return;
+    }
 
-  setDrawer({ ...drawer, [side]: open });
-};
+    setDrawer({ ...drawer, [side]: open });
+  };
 
-const sideList = side => (
-  <div
-    className={classes.list}
-    role="presentation"
-    onClick={toggleDrawer(side, false)}
-    onKeyDown={toggleDrawer(side, false)}
-  >
-    <List>
-      {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-        <ListItem button key={text}>
-          <ListItemIcon>
-            {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-          </ListItemIcon>
-          <ListItemText primary={text} />
-        </ListItem>
-      ))}
-    </List>
-    <Divider />
-    <List>
-      {["All mail", "Trash", "Spam"].map((text, index) => (
-        <ListItem button key={text}>
-          <ListItemIcon>
-            {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-          </ListItemIcon>
-          <ListItemText primary={text} />
-        </ListItem>
-      ))}
-    </List>
-  </div>
-);
+  const sideList = side => (
+    <div
+      className={classes.list}
+      role="presentation"
+      onClick={toggleDrawer(side, false)}
+      onKeyDown={toggleDrawer(side, false)}
+    >
+      <List>
+        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
+          <ListItem button key={text}>
+            <ListItemIcon>
+              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+            </ListItemIcon>
+            <ListItemText primary={text} />
+          </ListItem>
+        ))}
+      </List>
+      <Divider />
+      <List>
+        {["All mail", "Trash", "Spam"].map((text, index) => (
+          <ListItem button key={text}>
+            <ListItemIcon>
+              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
+            </ListItemIcon>
+            <ListItemText primary={text} />
+          </ListItem>
+        ))}
+      </List>
+    </div>
+  );
 
-// mainbar handlers
+  // navbar handlers
   const handleProfileMenuOpen = event => {
     setAnchorEl(event.currentTarget);
   };
@@ -171,7 +176,7 @@ const sideList = side => (
 
   const menuId = "primary-search-account-menu";
 
-  // renders right icon submenu 
+  // renders right icon submenu
   const renderMenu = (
     <Menu
       anchorEl={anchorEl}
@@ -221,7 +226,7 @@ const sideList = side => (
           aria-haspopup="true"
           color="inherit"
         >
-          <AccountCircle />
+          {/* <AccountCircle /> */}
         </IconButton>
         <p>Profile</p>
       </MenuItem>
@@ -243,7 +248,6 @@ const sideList = side => (
             onClick={toggleDrawer("left", true)}
           >
             <MenuIcon />
-
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
             D&D Character Sheet
