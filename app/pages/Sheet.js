@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 
-// material ui
-import Checkbox from "@material-ui/core/Checkbox";
-
 // components
 import Layout from "../components/Layout";
 import CharHeader from "../components/CharSheet/CharHeader";
@@ -14,7 +11,34 @@ import CharTraits from "../components/CharSheet/CharTraits";
 import CharEquip from "../components/CharSheet/CharEquip";
 import CharFeats from "../components/CharSheet/CharFeats";
 
+// panel
+import { makeStyles } from "@material-ui/core/styles";
+import {
+  ExpansionPanel,
+  ExpansionPanelSummary,
+  ExpansionPanelDetails,
+  Typography,
+  Checkbox,
+  Divider,
+  Card,
+  Button
+} from "@material-ui/core";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
+import SaveIcon from "@material-ui/icons/Save";
+
+const useStyles = makeStyles(theme => ({
+  panel: {
+    width: "100%"
+  },
+  panelHeading: {
+    fontSize: theme.typography.pxToRem(15),
+    fontWeight: theme.typography.fontWeightRegular
+  }
+}));
+
 const Sheet = () => {
+  const classes = useStyles();
+
   // create hook with array of components
   const charSelected = [
     {
@@ -64,32 +88,46 @@ const Sheet = () => {
   console.log(...sheet);
 
   const handleCheckBox = event => {
-    console.log(event.target.checked);
-    console.log(event.target.name);
+    console.log("");
     console.log(event.target.dataset.index);
+    console.log(event.target.name);
+    console.log(event.target.checked);
+    console.log("");
   };
 
   return (
     <>
       <Layout>
-        <div>
-          {charSelected.map((charSelect, index) => {
-            return (
-              <span key={`char-select-menu-${index}`}>
-                <Checkbox
-                  key={index}
-                  checked={charSelect[index]}
-                  onChange={handleCheckBox}
-                  inputProps={
-                    ({ "aria-label": "primary checkbox" },
-                    { "data-index": index })
-                  }
-                  name={charSelect.name}
-                />
-                {charSelect.name}
-              </span>
-            );
-          })}
+        <div className={classes.panel}>
+          <ExpansionPanel>
+            <ExpansionPanelSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Typography className={classes.panelHeading}>Filter</Typography>
+            </ExpansionPanelSummary>
+            <Divider />
+            <ExpansionPanelDetails>
+              {charSelected.map((charSelect, index) => {
+                return (
+                  <span key={`char-select-menu-${index}`}>
+                    <Checkbox
+                      key={index}
+                      checked={charSelect[index]}
+                      onChange={handleCheckBox}
+                      inputProps={
+                        ({ "aria-label": "primary checkbox" },
+                        { "data-index": index })
+                      }
+                      name={charSelect.name}
+                    />
+                    {charSelect.name}
+                  </span>
+                );
+              })}
+            </ExpansionPanelDetails>
+          </ExpansionPanel>
         </div>
 
         <div>
