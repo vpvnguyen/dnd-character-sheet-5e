@@ -66,6 +66,7 @@ const Sheet = () => {
   const handleCheckBox = event => {
     console.log(event.target.checked);
     console.log(event.target.name);
+    console.log(event.target.dataset.index);
   };
 
   return (
@@ -76,9 +77,13 @@ const Sheet = () => {
             return (
               <span key={`char-select-menu-${index}`}>
                 <Checkbox
+                  key={index}
                   checked={charSelect[index]}
                   onChange={handleCheckBox}
-                  inputProps={{ "aria-label": "primary checkbox" }}
+                  inputProps={
+                    ({ "aria-label": "primary checkbox" },
+                    { "data-index": index })
+                  }
                   name={charSelect.name}
                 />
                 {charSelect.name}
