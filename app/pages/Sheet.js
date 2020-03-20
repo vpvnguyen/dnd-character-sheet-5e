@@ -15,6 +15,7 @@ import CharEquip from "../components/CharSheet/CharEquip";
 import CharFeats from "../components/CharSheet/CharFeats";
 
 const Sheet = () => {
+  // create hook with array of components
   const charSelected = [
     {
       name: "Header",
