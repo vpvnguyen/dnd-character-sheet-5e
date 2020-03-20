@@ -15,12 +15,6 @@ import CharEquip from "../components/CharSheet/CharEquip";
 import CharFeats from "../components/CharSheet/CharFeats";
 
 const Sheet = () => {
-  const [selectedSheet, setSelectedSheet] = useState([]);
-
-  const getSelectedSheet = childData => {
-    setSelectedSheet();
-  };
-
   const handleCheckBox = event => {
     console.log(event.target.checked);
     console.log(event.target.name);
