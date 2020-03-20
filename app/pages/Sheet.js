@@ -15,11 +15,6 @@ import CharEquip from "../components/CharSheet/CharEquip";
 import CharFeats from "../components/CharSheet/CharFeats";
 
 const Sheet = () => {
-  const handleCheckBox = event => {
-    console.log(event.target.checked);
-    console.log(event.target.name);
-  };
-
   const charSelected = [
     {
       name: "Header",
@@ -39,7 +34,6 @@ const Sheet = () => {
     {
       name: "ATK",
       component: <CharAtk />,
-
       checked: true
     },
     {
@@ -64,26 +58,38 @@ const Sheet = () => {
     }
   ];
 
+  const [sheet, setSheet] = useState(charSelected);
+
+  console.log(...sheet);
+
+  const handleCheckBox = event => {
+    console.log(event.target.checked);
+    console.log(event.target.name);
+  };
+
   return (
     <>
       <Layout>
         <div>
-          {charSelected.map((charSelect, index) => (
-            <span key={`char-select-menu-${index}`}>
-              <Checkbox
-                checked={charSelect[index]}
-                onChange={handleCheckBox}
-                inputProps={{ "aria-label": "primary checkbox" }}
-                name={charSelect.name}
-              />
-              {charSelect.name}
-            </span>
-          ))}
+          {charSelected.map((charSelect, index) => {
+            return (
+              <span key={`char-select-menu-${index}`}>
+                <Checkbox
+                  checked={charSelect[index]}
+                  onChange={handleCheckBox}
+                  inputProps={{ "aria-label": "primary checkbox" }}
+                  name={charSelect.name}
+                />
+                {charSelect.name}
+              </span>
+            );
+          })}
         </div>
 
         <div>
           {charSelected.map((charSelect, index) => {
-            if (charSelect.checked) return charSelect.component;
+            if (charSelect.checked)
+              return <div key={index}>{charSelect.component}</div>;
           })}
         </div>
       </Layout>
