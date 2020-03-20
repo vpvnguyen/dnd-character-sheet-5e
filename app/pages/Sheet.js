@@ -7,7 +7,12 @@ import Checkbox from "@material-ui/core/Checkbox";
 import Layout from "../components/Layout";
 import CharHeader from "../components/CharSheet/CharHeader";
 import CharStats from "../components/CharSheet/CharStats";
-import Panel from "../test/Panel";
+import CharHP from "../components/CharSheet/CharHP";
+import CharAtk from "../components/CharSheet/CharAtk";
+import CharProf from "../components/CharSheet/CharProf";
+import CharTraits from "../components/CharSheet/CharTraits";
+import CharEquip from "../components/CharSheet/CharEquip";
+import CharFeats from "../components/CharSheet/CharFeats";
 
 const Sheet = () => {
   const [selectedSheet, setSelectedSheet] = useState([]);
@@ -34,26 +39,33 @@ const Sheet = () => {
     },
     {
       name: "HP",
+      component: <CharHP />,
       checked: true
     },
     {
       name: "ATK",
+      component: <CharAtk />,
+
       checked: true
     },
     {
       name: "Prof",
+      component: <CharProf />,
       checked: true
     },
     {
       name: "Traits",
+      component: <CharTraits />,
       checked: true
     },
     {
       name: "Equip",
+      component: <CharEquip />,
       checked: true
     },
     {
       name: "Feats",
+      component: <CharFeats />,
       checked: true
     }
   ];
@@ -74,9 +86,12 @@ const Sheet = () => {
             </span>
           ))}
         </div>
-        <CharHeader />
-        <CharStats />
-        <Panel />
+
+        <div>
+          {charSelected.map((charSelect, index) => {
+            if (charSelect.checked) return charSelect.component;
+          })}
+        </div>
       </Layout>
     </>
   );
