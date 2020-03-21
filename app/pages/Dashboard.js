@@ -50,7 +50,6 @@ Dashboard.getInitialProps = async () => {
   const string = "string";
   // return { shows: data.map(entry => entry.show), string, getCharData };
   return { shows: data.map(entry => entry.show), string };
-
 };
 
 export default Dashboard;
