@@ -19,12 +19,9 @@ import {
   ExpansionPanelDetails,
   Typography,
   Checkbox,
-  Divider,
-  Card,
-  Button
+  Divider
 } from "@material-ui/core";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import SaveIcon from "@material-ui/icons/Save";
 
 const useStyles = makeStyles(theme => ({
   panel: {
