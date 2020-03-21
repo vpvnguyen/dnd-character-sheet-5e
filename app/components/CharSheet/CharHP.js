@@ -2,9 +2,27 @@ import React, { useState } from "react";
 import { Card } from "@material-ui/core";
 // ARMOR CLASS INITIATIVE SPEED
 
+const ArmorClass = () => {
+  const [armor, setArmor] = useState(0);
+  return (
+    <div>
+      <div>Armor Class: {armor}</div>
+    </div>
+  );
+};
 // CURRENT HIT POINTS / MAX
 // TEMPORARY HIT POINTS
 
+const HP = () => {
+  const [hp, setHp] = useState(0);
+  const [tempHp, setTempHp] = useState(0);
+  return (
+    <div>
+      <div>HP: {hp}</div>
+      <div>Temp HP: {tempHp}</div>
+    </div>
+  );
+};
 // Total / HIT DICE
 
 // DEATH SAVES
@@ -20,7 +38,7 @@ const DeathSaves = () => {
   console.log(deathSaves);
   return (
     <div>
-      Death Saves:
+      Death Saves
       <div>
         {deathSaves[0].success}: {deathSaves[0].qty}
       </div>
@@ -32,10 +50,11 @@ const DeathSaves = () => {
 };
 
 const CharHP = () => {
-  const [hp, setHp] = useState("");
   return (
     <Card>
       <div>CharHP</div>
+      <HP />
+      <ArmorClass />
       <DeathSaves />
     </Card>
   );
