@@ -10,7 +10,11 @@ const CharAtk = () => {
   return (
     <div>
       <Card>CharAtk</Card>
+      <div>ATK NAME</div>
       <div>ATK: {atk}</div>
+      <div>ATK BONUS</div>
+      <div>DMG/TYPE</div>
+      <text>Notes</text>
     </div>
   );
 };
