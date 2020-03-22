@@ -7,7 +7,12 @@ import { Card } from "@material-ui/core";
 
 const CharAtk = () => {
   const [atk, setAtk] = useState(0);
-  return <Card>CharAtk</Card>;
+  return (
+    <div>
+      <Card>CharAtk</Card>
+      <div>ATK: {atk}</div>
+    </div>
+  );
 };
 
 export default CharAtk;
