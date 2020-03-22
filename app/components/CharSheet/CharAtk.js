@@ -2,10 +2,11 @@
 // create 3 columns and 3 rows containing: Atk Name, atk bonus, dmg/type
 // create notes section
 
-import React from "react";
+import React, { useState } from "react";
 import { Card } from "@material-ui/core";
 
 const CharAtk = () => {
+  const [atk, setAtk] = useState(0);
   return <Card>CharAtk</Card>;
 };
 
