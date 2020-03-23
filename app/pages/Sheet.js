@@ -30,6 +30,13 @@ const useStyles = makeStyles(theme => ({
   panelHeading: {
     fontSize: theme.typography.pxToRem(15),
     fontWeight: theme.typography.fontWeightRegular
+  },
+  // card spacing
+  cardSpacing: {
+    maxWidth: 400, // card width
+    margin: `${theme.spacing(1)}px auto`, // space veritcally between cards
+    textAlign: "center",
+    padding: theme.spacing(2) // veritcal padding between cards
   }
 }));
 
@@ -130,7 +137,11 @@ const Sheet = () => {
         <div>
           {charSelected.map((charSelect, index) => {
             if (charSelect.checked)
-              return <div key={index}>{charSelect.component}</div>;
+              return (
+                <div key={index} className={classes.cardSpacing}>
+                  {charSelect.component}
+                </div>
+              );
           })}
         </div>
       </Layout>
