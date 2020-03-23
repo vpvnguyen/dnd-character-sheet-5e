@@ -57,7 +57,7 @@ const DeathSaves = () => {
 const CharHP = () => {
   return (
     <Card>
-      <div>CharHP</div>
+      <h3>CharHP</h3>
       <HP />
       <ArmorClass />
       <HitDice />

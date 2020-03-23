@@ -8,14 +8,14 @@ import { Card } from "@material-ui/core";
 const CharAtk = () => {
   const [atk, setAtk] = useState(0);
   return (
-    <div>
-      <Card>CharAtk</Card>
+    <Card>
+      <h3>CharAtk</h3>
       <div>ATK NAME</div>
       <div>ATK: {atk}</div>
       <div>ATK BONUS</div>
       <div>DMG/TYPE</div>
       <text>Notes</text>
-    </div>
+    </Card>
   );
 };
 

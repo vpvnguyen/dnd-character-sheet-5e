@@ -5,10 +5,10 @@ import { Card } from "@material-ui/core";
 
 const CharProf = () => {
   return (
-    <div>
-      <Card>CharProf</Card>
+    <Card>
+      <h3>CharProf</h3>
       <div>NOTES SECTION</div>
-    </div>
+    </Card>
   );
 };
 

@@ -63,10 +63,10 @@ const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
     overflow: "hidden",
-    padding: theme.spacing(0, 3)
+    padding: theme.spacing(0, 0)
   },
   paper: {
-    maxWidth: 400, // card width
+    // maxWidth: 400, // card width
     margin: `${theme.spacing(1)}px auto`, // space veritcally between cards
     textAlign: "center",
     padding: theme.spacing(2) // veritcal padding between cards
