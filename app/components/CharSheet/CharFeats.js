@@ -1,14 +1,24 @@
 // FEATURES & TRAITS
 // NOTES
 import React from "react";
-import { Card } from "@material-ui/core";
+import { Card, Grid, TextField } from "@material-ui/core";
 
 const CharFeats = () => {
   return (
     <>
       <Card>
         <h3>CharFeats</h3>
-        <div>Notes</div>
+        <Grid>
+          <TextField
+            id="outlined-multiline-static"
+            label="Description"
+            multiline
+            rows="2"
+            variant="outlined"
+            // value={charDesc}
+            // onChange={handleCharDescChange}
+          />
+        </Grid>
       </Card>
     </>
   );
