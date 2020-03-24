@@ -3,7 +3,7 @@
 // create notes section
 
 import React, { useState } from "react";
-import { Card } from "@material-ui/core";
+import { Card, Grid, TextField } from "@material-ui/core";
 
 const CharAtk = () => {
   const [atk, setAtk] = useState(0);
@@ -14,7 +14,17 @@ const CharAtk = () => {
       <div>ATK: {atk}</div>
       <div>ATK BONUS</div>
       <div>DMG/TYPE</div>
-      <text>Notes</text>
+      <Grid>
+        <TextField
+          id="outlined-multiline-static"
+          label="Description"
+          multiline
+          rows="2"
+          variant="outlined"
+          // value={charDesc}
+          // onChange={handleCharDescChange}
+        />
+      </Grid>
     </Card>
   );
 };
