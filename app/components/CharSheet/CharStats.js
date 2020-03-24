@@ -105,11 +105,35 @@ const CharStats = () => {
             </FormControl>
           </Grid>
         </Grid>
+        <div>INTELLIGENCE</div>
+        <div>WISDOM</div>
+        <div>CHARISMA</div>
+
         <Divider className={classes.divider} />
-        <Typography>
-          // STATS // STRENGTH // DEXTERITY // CONSTITUTION // INTELLIGENCE //
-          WISDOM // CHARISMA
-        </Typography>
+
+        <div>INSPIRATION</div>
+        <div>PROFICIENCY BONUS</div>
+
+        <Divider className={classes.divider} />
+
+        <div>SKILLS</div>
+        <div>Animal Handling (Wis)</div>
+        <div>Arcana (Int)</div>
+        <div>Athletics (Str)</div>
+        <div>Deception (Cha)</div>
+        <div>History (Int)</div>
+        <div>Insight (Wis)</div>
+        <div>Intimidation (Cha)</div>
+        <div>Investigation (Int)</div>
+        <div>Medicine (Wis)</div>
+        <div>Nature (Int)</div>
+        <div>Perception (Wis)</div>
+        <div>Performance (Cha)</div>
+        <div>Persuasion (Cha)</div>
+        <div>Religion (Int)</div>
+        <div>Sleight of Hand (Dex)</div>
+        <div>Stealth (Dex)</div>
+        <div>Survival (Wis)</div>
       </Paper>
     </div>
   );
