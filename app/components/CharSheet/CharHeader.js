@@ -141,8 +141,9 @@ const CharHeader = () => {
             <FormControl>
               <InputLabel>Name</InputLabel>
               <Input
+                label="myName"
                 fullWidth
-                placeholder="Name"
+                placeholder="Names"
                 value={charName}
                 onChange={handleCharNameChange}
               />
@@ -225,15 +226,15 @@ const CharHeader = () => {
         </Grid>
 
         <Grid>
-          <FormControl>
-            <InputLabel>Description</InputLabel>
-            <Input
-              fullWidth
-              placeholder="Description"
-              value={charDesc}
-              onChange={handleCharDescChange}
-            />
-          </FormControl>
+          <TextField
+            id="outlined-multiline-static"
+            label="Description"
+            multiline
+            rows="2"
+            variant="outlined"
+            value={charDesc}
+            onChange={handleCharDescChange}
+          />
         </Grid>
       </Paper>
     </div>
