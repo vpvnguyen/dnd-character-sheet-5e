@@ -89,7 +89,7 @@ const Sheet = () => {
 
   const [sheet, setSheet] = useState(charSelected);
 
-  console.log(...sheet);
+  // console.log(...sheet);
 
   const handleCheckBox = event => {
     console.log("");
