@@ -1,14 +1,3 @@
-// CREATE MODEL
-// SAVING THROWS
-// Strength
-// Dexterity
-// Constitution
-// Intelligence
-// Wisdom
-// Charisma
-
-// PASSIVE WISDOM (PERCEPTION)
-
 import React, { useState } from "react";
 import {
   makeStyles,
@@ -74,6 +63,9 @@ const CharStats = () => {
         {CharStatsModel.stats.map((value, index) => (
           <div>{value}</div>
         ))}
+        <Divider className={classes.divider} />
+
+        <div>PASSIVE WISDOM (PERCEPTION)</div>
       </Paper>
     </div>
   );
