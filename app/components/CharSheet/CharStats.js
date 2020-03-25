@@ -59,6 +59,8 @@ import {
   FormControl
 } from "@material-ui/core";
 
+import CharStatsModel from "../../Model/CharStats.Model";
+
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
@@ -82,32 +84,17 @@ const CharStats = () => {
     <div className={classes.root}>
       <Paper className={classes.paper}>
         <Grid container spacing={3}>
-          <Grid item xs>
-            <FormControl>
-              <InputLabel>STRENGTH </InputLabel>
-              <Input fullWidth placeholder="Name" />
-            </FormControl>
-          </Grid>
-
-          <Grid item xs>
-            <Grid item xs>
-              <FormControl>
-                <InputLabel>DEXTERITY</InputLabel>
-                <Input fullWidth placeholder="Class" />
-              </FormControl>
-            </Grid>
-          </Grid>
-
-          <Grid item xs>
-            <FormControl>
-              <InputLabel>CONSTITUTION</InputLabel>
-              <Input fullWidth placeholder="Level" />
-            </FormControl>
-          </Grid>
+          {CharStatsModel.stats.map((value, index) => (
+            <div>
+              <Grid item xs key={index}>
+                <FormControl>
+                  <InputLabel>{value}</InputLabel>
+                  <Input fullWidth placeholder={value} />
+                </FormControl>
+              </Grid>
+            </div>
+          ))}
         </Grid>
-        <div>INTELLIGENCE</div>
-        <div>WISDOM</div>
-        <div>CHARISMA</div>
 
         <Divider className={classes.divider} />
 
@@ -115,25 +102,12 @@ const CharStats = () => {
         <div>PROFICIENCY BONUS</div>
 
         <Divider className={classes.divider} />
-
         <div>SKILLS</div>
-        <div>Animal Handling (Wis)</div>
-        <div>Arcana (Int)</div>
-        <div>Athletics (Str)</div>
-        <div>Deception (Cha)</div>
-        <div>History (Int)</div>
-        <div>Insight (Wis)</div>
-        <div>Intimidation (Cha)</div>
-        <div>Investigation (Int)</div>
-        <div>Medicine (Wis)</div>
-        <div>Nature (Int)</div>
-        <div>Perception (Wis)</div>
-        <div>Performance (Cha)</div>
-        <div>Persuasion (Cha)</div>
-        <div>Religion (Int)</div>
-        <div>Sleight of Hand (Dex)</div>
-        <div>Stealth (Dex)</div>
-        <div>Survival (Wis)</div>
+        {CharStatsModel.skills.map((value, index) => (
+          <div>
+            {value.name} ({value.type})
+          </div>
+        ))}
       </Paper>
     </div>
   );
