@@ -48,5 +48,5 @@ const CharSheetModel = {
   getSubStr: stat => stat.substring(0, 3)
 };
 
-CharSheetModel;
+export default CharSheetModel;
 console.log(CharSheetModel.getSubStr(CharSheetModel.stats.str)); // Str
