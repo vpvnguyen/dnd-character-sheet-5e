@@ -14,53 +14,38 @@ const CharSheetModel = {
     // type: "Wis"
     arcana: "Arcana",
     // type: "Int"
-
     athletics: "Athletics",
     // type: "Str"
-
     deception: "Deception",
     // type: "Cha"
-
     history: "History",
     // type: "Int"
-
     insight: "Insight",
     // type: "Wis"
-
     intimidation: "Intimidation",
     // type: "Cha"
-
     investigation: "Investigation",
     // type: "Int"
-
     medicine: "Medicine",
     // type: "Wis"
-
     nature: "Nature",
     // type: "Int"
-
     perception: "Perception",
     // type: "Wis"
-
     performance: "Performance",
     // type: "Cha"
-
     persuasion: "Persuasion",
     // type: "Cha"
-
     Religion: "Religion",
     // type: "Int"
-
     sleightOfHand: "Sleight of Hand",
     // type: "Dex"
-
     stealth: "Stealth",
     // type: "Dex"
-
     survival: "Survival"
     // type: "Wis"
   },
-  statsSubStr: subStr => subStr.substring(0, 3)
+  getSubStr: stat => stat.substring(0, 3)
 };
 
-console.log(CharSheetModel.statsSubStr(CharSheetModel.stats.str)); // Str
+console.log(CharSheetModel.getSubStr(CharSheetModel.stats.str)); // Str
