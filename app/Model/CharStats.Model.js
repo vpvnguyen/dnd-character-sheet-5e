@@ -1,86 +1,138 @@
 const CharStatsModel = {
+  sex: [
+    {
+      value: "Male",
+      label: "Male",
+    },
+    {
+      value: "Female",
+      label: "Female",
+    },
+    {
+      value: "Neutral",
+      label: "Neutral",
+    },
+  ],
+  alignment: [
+    {
+      value: "LawfulGood",
+      label: "Lawful Good",
+    },
+    {
+      value: "NeutralGood",
+      label: "Neutral Good",
+    },
+    {
+      value: "ChaoticGood",
+      label: "Chaotic Good",
+    },
+    {
+      value: "LawfulNeutral",
+      label: "Lawful Neutral",
+    },
+    {
+      value: "Neutral",
+      label: "Neutral",
+    },
+    {
+      value: "ChaoticNeutral",
+      label: "Chaotic Neutral",
+    },
+    {
+      value: "LawfulEvil",
+      label: "Lawful Evil",
+    },
+    {
+      value: "NeutralEvil",
+      label: "Neutral Evil",
+    },
+    {
+      value: "ChaoticEvil",
+      label: "Chaotic Evil",
+    },
+  ],
   stats: [
     "Strength",
     "Dexterity",
     "Constitution",
     "Intelligence",
     "Wisdom",
-    "Charisma"
+    "Charisma",
   ],
   skills: [
     {
       name: "Acrobatics",
-      type: "Dex"
+      type: "Dex",
     },
     {
       name: "Animal Handling",
-      type: "Wis"
+      type: "Wis",
     },
     {
       name: "Arcana",
-      type: "Int"
+      type: "Int",
     },
     {
       name: "Athletics",
-      type: "Str"
+      type: "Str",
     },
     {
       name: "Deception",
-      type: "Cha"
+      type: "Cha",
     },
     {
       name: "History",
-      type: "Int"
+      type: "Int",
     },
     {
       name: "Insight",
-      type: "Wis"
+      type: "Wis",
     },
     {
       name: "Intimidation",
-      type: "Cha"
+      type: "Cha",
     },
     {
       name: "Investigation",
-      type: "Int"
+      type: "Int",
     },
     {
       name: "Medicine",
-      type: "Wis"
+      type: "Wis",
     },
     {
       name: "Nature",
-      type: "Int"
+      type: "Int",
     },
     {
       name: "Perception",
-      type: "Wis"
+      type: "Wis",
     },
     {
       name: "Performance",
-      type: "Cha"
+      type: "Cha",
     },
     {
       name: "Persuasion",
-      type: "Cha"
+      type: "Cha",
     },
     {
       name: "Religion",
-      type: "Int"
+      type: "Int",
     },
     {
       name: "Sleight of Hand",
-      type: "Dex"
+      type: "Dex",
     },
     {
       name: "Stealth",
-      type: "Dex"
+      type: "Dex",
     },
     {
       name: "Survival",
-      type: "Wis"
-    }
-  ]
+      type: "Wis",
+    },
+  ],
 };
 
 export default CharStatsModel;
