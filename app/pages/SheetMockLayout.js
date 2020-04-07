@@ -24,7 +24,7 @@ export default function CSSGrid() {
   return (
     <Container maxWidth="md">
       {/* Header */}
-      <Grid container spacing={1}>
+      <Grid container spacing={2}>
         <Grid item xs={3}>
           <Paper className={classes.paper}>Character Name</Paper>
         </Grid>
