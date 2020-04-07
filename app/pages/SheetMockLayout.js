@@ -1,22 +1,18 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
 import Paper from "@material-ui/core/Paper";
 import Divider from "@material-ui/core/Divider";
 import Grid from "@material-ui/core/Grid";
-import { CssBaseline } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
-  container: {
-    display: "grid",
-    gridTemplateColumns: "repeat(12, 1fr)",
-    gridGap: theme.spacing(3),
+  root: {
+    flexGrow: 1,
   },
   paper: {
     padding: theme.spacing(1),
     textAlign: "center",
     color: theme.palette.text.secondary,
-    whiteSpace: "nowrap",
+    // whiteSpace: "nowrap", // allows text to flow outside of component; will lose responsive layout if text flows out of media query
     marginBottom: theme.spacing(1),
   },
   divider: {
@@ -28,15 +24,9 @@ export default function CSSGrid() {
   const classes = useStyles();
 
   return (
-    <div>
-      <CssBaseline />
-
-      <Typography variant="subtitle1" gutterBottom>
-        Sheet Material-UI Grid:
-      </Typography>
-
+    <div className={classes.root}>
       {/* Header */}
-      <Grid container spacing={3}>
+      <Grid container spacing={1}>
         <Grid item xs={3}>
           <Paper className={classes.paper}>Character Name</Paper>
         </Grid>
