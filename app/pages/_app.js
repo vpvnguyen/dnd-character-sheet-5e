@@ -1,3 +1,4 @@
+// add compatibility to material ui by customizing document to strip next from rendering default styles
 import React from "react";
 import PropTypes from "prop-types";
 import Head from "next/head";
