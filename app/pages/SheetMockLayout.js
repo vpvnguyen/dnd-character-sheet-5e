@@ -3,11 +3,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Divider from "@material-ui/core/Divider";
 import Grid from "@material-ui/core/Grid";
+import Container from "@material-ui/core/Container";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
   paper: {
     padding: theme.spacing(1),
     textAlign: "center",
@@ -24,7 +22,7 @@ export default function CSSGrid() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <Container maxWidth="md">
       {/* Header */}
       <Grid container spacing={1}>
         <Grid item xs={3}>
@@ -200,6 +198,6 @@ export default function CSSGrid() {
           </Grid>
         </Grid>
       </Grid>
-    </div>
+    </Container>
   );
 }
