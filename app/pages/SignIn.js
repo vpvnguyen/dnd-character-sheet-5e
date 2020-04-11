@@ -13,6 +13,7 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import { CssBaseline } from "@material-ui/core";
+
 const useStyles = makeStyles((theme) => ({
   paper: {
     marginTop: theme.spacing(8),
@@ -98,7 +99,37 @@ const SignIn = () => {
             >
               Layout
             </Button>
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              color="primary"
+              className={classes.submit}
+              href="/NestedGrid" //  REPLACE WITH AUTH
+            >
+              NestedGrid
+            </Button>
 
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              color="primary"
+              className={classes.submit}
+              href="/AutoLayout" //  REPLACE WITH AUTH
+            >
+              AutoLayout
+            </Button>
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              color="primary"
+              className={classes.submit}
+              href="/GridBreakpoints" //  REPLACE WITH AUTH
+            >
+              GridBreakpoints
+            </Button>
             <Grid container>
               <Grid item xs>
                 <Link href="#" variant="body2">
