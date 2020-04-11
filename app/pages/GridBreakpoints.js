@@ -22,8 +22,14 @@ export default function FullWidthGrid() {
     <div className={classes.root}>
       <Container maxWidth="sm">
         <Grid container spacing={1}>
-          <Grid item xs={12}>
+          <Grid item xs={12} sm={6}>
             <Paper className={classes.paper}>Character Header</Paper>
+          </Grid>
+          <Grid item xs={12} sm={6}>
+            <Paper className={classes.paper}>
+              Class, Level, Background, Player Name, Faction, Race, Alignment,
+              Exp
+            </Paper>
           </Grid>
           <Grid item xs={12} sm={3}>
             <Paper className={classes.paper}>
