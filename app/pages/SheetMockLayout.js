@@ -24,7 +24,7 @@ export default function CSSGrid() {
   return (
     <Container maxWidth="md">
       {/* Header */}
-      <Grid container spacing={2}>
+      <Grid container spacing={1}>
         <Grid item xs={3}>
           <Paper className={classes.paper}>Character Name</Paper>
         </Grid>
@@ -43,11 +43,10 @@ export default function CSSGrid() {
           direction="column"
           justify="center"
           alignItems="stretch"
-          xs={2}
+          xs={1}
         >
           <Paper className={classes.paper}>
             <div>Str</div>
-            <div>Dex</div>
             <div>Dex</div>
             <div>Const</div>
             <div>Intel</div>
@@ -109,93 +108,86 @@ export default function CSSGrid() {
           container
           direction="row"
           justify="space-evenly"
-          alignItems="stretch"
+          // alignItems="stretch"
           xs={4}
         >
-          <Grid
-            item
-            container
-            direction="row"
-            justify="center"
-            alignItems="stretch"
-            xs={3}
-          >
-            <Paper className={classes.paper}>
-              <div>Armor Class</div>
-            </Paper>
-          </Grid>
-          <Grid
-            item
-            container
-            direction="row"
-            justify="center"
-            alignItems="stretch"
-            xs={3}
-          >
-            <Paper className={classes.paper}>
-              <div>Initiative</div>
-            </Paper>
-          </Grid>
-          <Grid
-            item
-            container
-            direction="row"
-            justify="center"
-            alignItems="stretch"
-            xs={3}
-          >
-            <Paper className={classes.paper}>
-              <div>Speed</div>
-            </Paper>
-          </Grid>
-          <Grid
-            item
-            container
-            direction="row"
-            justify="center"
-            alignItems="stretch"
-            xs={12}
-          >
-            <Paper className={classes.paper}>
-              <div>HP</div>
-            </Paper>
-          </Grid>
-          <Grid
-            item
-            container
-            direction="row"
-            justify="center"
-            alignItems="stretch"
-            xs={12}
-          >
-            <Paper className={classes.paper}>
-              <div>Temp HP</div>
-            </Paper>
-          </Grid>
-          <Grid
-            item
-            container
-            direction="row"
-            justify="center"
-            alignItems="stretch"
-            xs={6}
-          >
-            <Paper className={classes.paper}>
-              <div>Hit Dice</div>
-            </Paper>
-          </Grid>
-          <Grid
-            item
-            container
-            direction="row"
-            justify="center"
-            alignItems="stretch"
-            xs={6}
-          >
-            <Paper className={classes.paper}>
-              <div>Death Saves</div>
-            </Paper>
-          </Grid>
+          <Paper className={classes.paper}>
+            <div>Armor Class</div>
+            <div>Armor Class</div>
+          </Paper>
+
+          <Paper className={classes.paper}>
+            <div>Initiative</div>
+          </Paper>
+
+          <Paper className={classes.paper}>
+            <div>Speed</div>
+          </Paper>
+
+          <Paper className={classes.paper}>
+            <div>Speed</div>
+          </Paper>
+
+          <Paper className={classes.paper}>
+            <div>Spsssssssssssseed</div>
+          </Paper>
+
+          <Paper className={classes.paper}>
+            <div>Speed</div>
+          </Paper>
+
+          <Paper className={classes.paper}>
+            <div>Speed</div>
+          </Paper>
+        </Grid>
+
+        <Grid
+          item
+          container
+          direction="row"
+          justify="center"
+          alignItems="stretch"
+          xs={12}
+        >
+          <Paper className={classes.paper}>
+            <div>HP</div>
+          </Paper>
+        </Grid>
+        <Grid
+          item
+          container
+          direction="row"
+          justify="center"
+          alignItems="stretch"
+          xs={12}
+        >
+          <Paper className={classes.paper}>
+            <div>Temp HP</div>
+          </Paper>
+        </Grid>
+        <Grid
+          item
+          container
+          direction="row"
+          justify="center"
+          alignItems="stretch"
+          xs={6}
+        >
+          <Paper className={classes.paper}>
+            <div>Hit Dice</div>
+          </Paper>
+        </Grid>
+        <Grid
+          item
+          container
+          direction="row"
+          justify="center"
+          alignItems="stretch"
+          xs={6}
+        >
+          <Paper className={classes.paper}>
+            <div>Death Saves</div>
+          </Paper>
         </Grid>
       </Grid>
     </Container>
