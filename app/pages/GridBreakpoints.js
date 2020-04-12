@@ -31,17 +31,7 @@ export default function FullWidthGrid() {
               Exp
             </Paper>
           </Grid>
-          <Grid item xs={12} sm={3}>
-            <Paper className={classes.paper}>
-              <h4>Primary</h4>
-              <div>Armor Class</div>
-              <div>Initiative</div>
-              <div>Speed</div>
-              <div>HP</div>
-              <div>Temp HP</div>
-              <div>Hit Dice / Save Throws</div>
-            </Paper>
-          </Grid>
+
           <Grid item xs={4} sm={3}>
             <Paper className={classes.paper}>
               <h4>Stats</h4>
@@ -53,18 +43,8 @@ export default function FullWidthGrid() {
               <div>Char</div>
             </Paper>
           </Grid>
-          <Grid item xs={4} sm={3}>
-            <Paper className={classes.paper}>
-              <h4>Saving Throws</h4>
-              <div>str</div>
-              <div>dex</div>
-              <div>Const</div>
-              <div>Intel</div>
-              <div>Wis</div>
-              <div>Char</div>
-            </Paper>
-          </Grid>
-          <Grid item xs={4} sm={3}>
+
+          <Grid item xs={8} sm={3}>
             <Paper className={classes.paper}>
               <h4>Skills</h4>
               <div>Acrobatics</div>
@@ -85,6 +65,54 @@ export default function FullWidthGrid() {
               <div>Sleight of Hand</div>
               <div>Stealth</div>
               <div>Survival</div>
+            </Paper>
+          </Grid>
+
+          <Grid item xs={12} sm={3}>
+            <Paper className={classes.paper}>
+              <h4>Primary</h4>
+              <div>Armor Class</div>
+              <div>Initiative</div>
+              <div>Speed</div>
+              <div>HP</div>
+              <div>Temp HP</div>
+              <div>Hit Dice / Save Throws</div>
+            </Paper>
+          </Grid>
+
+          <Grid item xs={12} sm={3}>
+            <Paper className={classes.paper}>
+              <h4>Primary</h4>
+              <span>some1</span>
+              <span>some2</span>
+              <span>some3</span>
+              {/* <Grid item xs={4}>
+                <Paper className={classes.paper}>
+                  <div>Armor Class</div>
+                </Paper>
+              </Grid>
+              <Grid item xs={4}>
+                <Paper className={classes.paper}>
+                  <div>Initiative</div>
+                </Paper>
+              </Grid>
+              <Grid item xs={4}>
+                <Paper className={classes.paper}>
+                  <div>Speed</div>
+                </Paper>
+              </Grid> */}
+            </Paper>
+          </Grid>
+
+          <Grid item xs={12} sm={3}>
+            <Paper className={classes.paper}>
+              <h4>Saving Throws</h4>
+              <div>str</div>
+              <div>dex</div>
+              <div>Const</div>
+              <div>Intel</div>
+              <div>Wis</div>
+              <div>Char</div>
             </Paper>
           </Grid>
 
