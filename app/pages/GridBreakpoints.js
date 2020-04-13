@@ -68,7 +68,7 @@ export default function FullWidthGrid() {
             </Paper>
           </Grid>
 
-          <Grid item xs={12} sm={3}>
+          <Grid item xs={12} sm={6}>
             <Paper className={classes.paper}>
               <h4>Primary</h4>
               <div>Armor Class</div>
@@ -81,7 +81,7 @@ export default function FullWidthGrid() {
             </Paper>
           </Grid>
 
-          <Grid item xs={12} sm={3}>
+          <Grid item xs={12} sm={4}>
             <Paper className={classes.paper}>
               <h4>Saving Throws</h4>
               <div>str</div>
@@ -93,20 +93,22 @@ export default function FullWidthGrid() {
             </Paper>
           </Grid>
 
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={4}>
             <Paper className={classes.paper}>Inspiration</Paper>
-          </Grid>
-          <Grid item xs={12} sm={6}>
             <Paper className={classes.paper}>Proficiency Bonus</Paper>
+            <Paper className={classes.paper}>Passive Wisdom (Perception)</Paper>
           </Grid>
-          <Grid item xs={12} sm={6}>
+
+          <Grid item xs={12} sm={4}>
             <Paper className={classes.paper}>
               <div>Passive Wisdom (Perception)</div>
+            </Paper>
+            <Paper className={classes.paper}>
               <div>Other Profs & Languages notes section</div>
             </Paper>
           </Grid>
 
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={4}>
             <Paper className={classes.paper}>
               <h4>Attacks and Spellcasting</h4>
               <div>Name | ATK Bonus | Damage/Type</div>
@@ -114,7 +116,7 @@ export default function FullWidthGrid() {
             </Paper>
           </Grid>
 
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={4}>
             <Paper className={classes.paper}>
               <h4>Equipment</h4>
               <div>CP</div>
@@ -125,31 +127,19 @@ export default function FullWidthGrid() {
             </Paper>
           </Grid>
 
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={4}>
             <Paper className={classes.paper}>
               <div>Personality Traits</div>
             </Paper>
-          </Grid>
-
-          <Grid item xs={12} sm={6}>
             <Paper className={classes.paper}>
               <div>Ideals</div>
             </Paper>
-          </Grid>
-
-          <Grid item xs={12} sm={6}>
             <Paper className={classes.paper}>
               <div>Bonds</div>
             </Paper>
-          </Grid>
-
-          <Grid item xs={12} sm={6}>
             <Paper className={classes.paper}>
               <div>Flaws</div>
             </Paper>
-          </Grid>
-
-          <Grid item xs={12} sm={6}>
             <Paper className={classes.paper}>
               <div>Features & Traits</div>
             </Paper>
