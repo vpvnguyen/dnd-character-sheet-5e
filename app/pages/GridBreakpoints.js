@@ -20,12 +20,12 @@ export default function FullWidthGrid() {
 
   return (
     <div className={classes.root}>
-      <Container maxWidth="sm">
+      <Container maxWidth="md">
         <Grid container spacing={1}>
-          <Grid item xs={12} sm={6}>
-            <Paper className={classes.paper}>Character Header</Paper>
+          <Grid item xs={12} sm={4}>
+            <Paper className={classes.paper}>Character Name</Paper>
           </Grid>
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={8}>
             <Paper className={classes.paper}>
               Class, Level, Background, Player Name, Faction, Race, Alignment,
               Exp
@@ -83,6 +83,14 @@ export default function FullWidthGrid() {
 
           <Grid item xs={12} sm={4}>
             <Paper className={classes.paper}>
+              <h4>Attacks and Spellcasting</h4>
+              <div>Name | ATK Bonus | Damage/Type</div>
+              <div>Notes section</div>
+            </Paper>
+          </Grid>
+
+          <Grid item xs={12} sm={4}>
+            <Paper className={classes.paper}>
               <h4>Saving Throws</h4>
               <div>str</div>
               <div>dex</div>
@@ -105,14 +113,6 @@ export default function FullWidthGrid() {
             </Paper>
             <Paper className={classes.paper}>
               <div>Other Profs & Languages notes section</div>
-            </Paper>
-          </Grid>
-
-          <Grid item xs={12} sm={4}>
-            <Paper className={classes.paper}>
-              <h4>Attacks and Spellcasting</h4>
-              <div>Name | ATK Bonus | Damage/Type</div>
-              <div>Notes section</div>
             </Paper>
           </Grid>
 
