@@ -76,31 +76,8 @@ export default function FullWidthGrid() {
               <div>Speed</div>
               <div>HP</div>
               <div>Temp HP</div>
-              <div>Hit Dice / Save Throws</div>
-            </Paper>
-          </Grid>
-
-          <Grid item xs={12} sm={3}>
-            <Paper className={classes.paper}>
-              <h4>Primary</h4>
-              <span>some1</span>
-              <span>some2</span>
-              <span>some3</span>
-              {/* <Grid item xs={4}>
-                <Paper className={classes.paper}>
-                  <div>Armor Class</div>
-                </Paper>
-              </Grid>
-              <Grid item xs={4}>
-                <Paper className={classes.paper}>
-                  <div>Initiative</div>
-                </Paper>
-              </Grid>
-              <Grid item xs={4}>
-                <Paper className={classes.paper}>
-                  <div>Speed</div>
-                </Paper>
-              </Grid> */}
+              <div>Hit Dice</div>
+              <div>Death Saves</div>
             </Paper>
           </Grid>
 
@@ -117,22 +94,65 @@ export default function FullWidthGrid() {
           </Grid>
 
           <Grid item xs={12} sm={6}>
-            <Paper className={classes.paper}>xs=12 sm=6</Paper>
+            <Paper className={classes.paper}>Inspiration</Paper>
           </Grid>
           <Grid item xs={12} sm={6}>
-            <Paper className={classes.paper}>xs=12 sm=6</Paper>
+            <Paper className={classes.paper}>Proficiency Bonus</Paper>
           </Grid>
-          <Grid item xs={6} sm={3}>
-            <Paper className={classes.paper}>xs=6 sm=3</Paper>
+          <Grid item xs={12} sm={6}>
+            <Paper className={classes.paper}>
+              <div>Passive Wisdom (Perception)</div>
+              <div>Other Profs & Languages notes section</div>
+            </Paper>
           </Grid>
-          <Grid item xs={6} sm={3}>
-            <Paper className={classes.paper}>xs=6 sm=3</Paper>
+
+          <Grid item xs={12} sm={6}>
+            <Paper className={classes.paper}>
+              <h4>Attacks and Spellcasting</h4>
+              <div>Name | ATK Bonus | Damage/Type</div>
+              <div>Notes section</div>
+            </Paper>
           </Grid>
-          <Grid item xs={6} sm={3}>
-            <Paper className={classes.paper}>xs=6 sm=3</Paper>
+
+          <Grid item xs={12} sm={6}>
+            <Paper className={classes.paper}>
+              <h4>Equipment</h4>
+              <div>CP</div>
+              <div>SP</div>
+              <div>EP</div>
+              <div>GP</div>
+              <div>PP</div>
+            </Paper>
           </Grid>
-          <Grid item xs={6} sm={3}>
-            <Paper className={classes.paper}>xs=6 sm=3</Paper>
+
+          <Grid item xs={12} sm={6}>
+            <Paper className={classes.paper}>
+              <div>Personality Traits</div>
+            </Paper>
+          </Grid>
+
+          <Grid item xs={12} sm={6}>
+            <Paper className={classes.paper}>
+              <div>Ideals</div>
+            </Paper>
+          </Grid>
+
+          <Grid item xs={12} sm={6}>
+            <Paper className={classes.paper}>
+              <div>Bonds</div>
+            </Paper>
+          </Grid>
+
+          <Grid item xs={12} sm={6}>
+            <Paper className={classes.paper}>
+              <div>Flaws</div>
+            </Paper>
+          </Grid>
+
+          <Grid item xs={12} sm={6}>
+            <Paper className={classes.paper}>
+              <div>Features & Traits</div>
+            </Paper>
           </Grid>
         </Grid>
       </Container>
