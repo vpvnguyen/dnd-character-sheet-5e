@@ -4,6 +4,16 @@ import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 
+// components
+import CharHeader from "../components/CharSheet/CharHeader";
+import CharStats from "../components/CharSheet/CharStats";
+import CharHP from "../components/CharSheet/CharHP";
+import CharAtk from "../components/CharSheet/CharAtk";
+import CharProf from "../components/CharSheet/CharProf";
+import CharTraits from "../components/CharSheet/CharTraits";
+import CharEquip from "../components/CharSheet/CharEquip";
+import CharFeats from "../components/CharSheet/CharFeats";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -15,6 +25,50 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+// create filters for each component
+const charSelected = [
+  {
+    name: "Header",
+    component: <CharHeader />,
+    checked: true,
+  },
+  {
+    name: "Stats",
+    component: <CharStats />,
+    checked: true,
+  },
+  {
+    name: "HP",
+    component: <CharHP />,
+    checked: true,
+  },
+  {
+    name: "ATK",
+    component: <CharAtk />,
+    checked: true,
+  },
+  {
+    name: "Prof",
+    component: <CharProf />,
+    checked: true,
+  },
+  {
+    name: "Traits",
+    component: <CharTraits />,
+    checked: true,
+  },
+  {
+    name: "Equip",
+    component: <CharEquip />,
+    checked: true,
+  },
+  {
+    name: "Feats",
+    component: <CharFeats />,
+    checked: true,
+  },
+];
+
 export default function FullWidthGrid() {
   const classes = useStyles();
 
@@ -22,13 +76,9 @@ export default function FullWidthGrid() {
     <div className={classes.root}>
       <Container maxWidth="md">
         <Grid container spacing={1}>
-          <Grid item xs={12} sm={4}>
-            <Paper className={classes.paper}>Character Name</Paper>
-          </Grid>
-          <Grid item xs={12} sm={8}>
+          <Grid item xs={12} sm={12}>
             <Paper className={classes.paper}>
-              Class, Level, Background, Player Name, Faction, Race, Alignment,
-              Exp
+              <CharHeader />
             </Paper>
           </Grid>
 
