@@ -13,16 +13,6 @@ import {
 } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-    overflow: "hidden",
-    padding: theme.spacing(0, 0),
-  },
-  paper: {
-    margin: `${theme.spacing(1)}px auto`, // drop shadow
-    textAlign: "center",
-    padding: theme.spacing(2), // veritcal padding between cards
-  },
   divider: {
     margin: "15px",
   },
@@ -128,7 +118,7 @@ const CharHeader = () => {
   };
 
   return (
-    <div className={classes.root}>
+    <React.Fragment>
       <Typography variant="subtitle1" gutterBottom>
         Character Sheet 5e
       </Typography>
@@ -235,7 +225,7 @@ const CharHeader = () => {
           onChange={handleCharDescChange}
         />
       </Grid>
-    </div>
+    </React.Fragment>
   );
 };
 
