@@ -3,7 +3,8 @@ import React, { useState } from "react";
 // components
 import Layout from "../components/Layout";
 import CharHeader from "../components/CharSheet/CharHeader";
-import CharStats from "../components/CharSheet/CharStats";
+import CharAttributes from "../components/CharSheet/CharAttributes";
+import CharSkills from "../components/CharSheet/CharSkills";
 import CharHP from "../components/CharSheet/CharHP";
 import CharAtk from "../components/CharSheet/CharAtk";
 import CharProf from "../components/CharSheet/CharProf";
@@ -19,25 +20,25 @@ import {
   ExpansionPanelDetails,
   Typography,
   Checkbox,
-  Divider
+  Divider,
 } from "@material-ui/core";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   panel: {
-    width: "100%"
+    width: "100%",
   },
   panelHeading: {
     fontSize: theme.typography.pxToRem(15),
-    fontWeight: theme.typography.fontWeightRegular
+    fontWeight: theme.typography.fontWeightRegular,
   },
   // card spacing
   cardSpacing: {
     maxWidth: 400, // card width
     margin: `${theme.spacing(1)}px auto`, // space veritcally between cards
     textAlign: "center",
-    padding: theme.spacing(2) // veritcal padding between cards
-  }
+    padding: theme.spacing(2), // veritcal padding between cards
+  },
 }));
 
 const Sheet = () => {
@@ -48,50 +49,50 @@ const Sheet = () => {
     {
       name: "Header",
       component: <CharHeader />,
-      checked: true
+      checked: true,
     },
     {
       name: "Stats",
-      component: <CharStats />,
-      checked: true
+      component: <CharAttributes />,
+      checked: true,
     },
     {
       name: "HP",
       component: <CharHP />,
-      checked: true
+      checked: true,
     },
     {
       name: "ATK",
       component: <CharAtk />,
-      checked: true
+      checked: true,
     },
     {
       name: "Prof",
       component: <CharProf />,
-      checked: true
+      checked: true,
     },
     {
       name: "Traits",
       component: <CharTraits />,
-      checked: true
+      checked: true,
     },
     {
       name: "Equip",
       component: <CharEquip />,
-      checked: true
+      checked: true,
     },
     {
       name: "Feats",
       component: <CharFeats />,
-      checked: true
-    }
+      checked: true,
+    },
   ];
 
   const [sheet, setSheet] = useState(charSelected);
 
   // console.log(...sheet);
 
-  const handleCheckBox = event => {
+  const handleCheckBox = (event) => {
     console.log("");
     console.log(event.target.dataset.index);
     console.log(event.target.name);
