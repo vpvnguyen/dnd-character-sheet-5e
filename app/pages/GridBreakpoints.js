@@ -6,9 +6,11 @@ import Container from "@material-ui/core/Container";
 
 // components
 import CharHeader from "../components/CharSheet/CharHeader";
-import CharStats from "../components/CharSheet/CharStats";
+import CharAttributes from "../components/CharSheet/CharAttributes";
+import CharSkills from "../components/CharSheet/CharSkills";
 import CharHP from "../components/CharSheet/CharHP";
 import CharAtk from "../components/CharSheet/CharAtk";
+import CharSavingThrows from "../components/CharSheet/CharSavingThrows";
 import CharProf from "../components/CharSheet/CharProf";
 import CharTraits from "../components/CharSheet/CharTraits";
 import CharEquip from "../components/CharSheet/CharEquip";
@@ -34,7 +36,7 @@ const charSelected = [
   },
   {
     name: "Stats",
-    component: <CharStats />,
+    component: <CharAttributes />,
     checked: true,
   },
   {
@@ -84,37 +86,14 @@ export default function FullWidthGrid() {
 
           <Grid item xs={4} sm={3}>
             <Paper className={classes.paper}>
-              <h4>Stats</h4>
-              <div>str</div>
-              <div>dex</div>
-              <div>Const</div>
-              <div>Intel</div>
-              <div>Wis</div>
-              <div>Char</div>
+              <CharAttributes />
             </Paper>
           </Grid>
 
           <Grid item xs={8} sm={3}>
             <Paper className={classes.paper}>
               <h4>Skills</h4>
-              <div>Acrobatics</div>
-              <div>Animal Handling</div>
-              <div>Arcana</div>
-              <div>Athletics</div>
-              <div>Deception</div>
-              <div>History</div>
-              <div>Insight</div>
-              <div>Intimidation</div>
-              <div>Investigation</div>
-              <div>Medicine</div>
-              <div>Nature</div>
-              <div>Perception</div>
-              <div>Performance</div>
-              <div>Persuasion</div>
-              <div>Religion</div>
-              <div>Sleight of Hand</div>
-              <div>Stealth</div>
-              <div>Survival</div>
+              <CharAttributes />
             </Paper>
           </Grid>
 
@@ -142,12 +121,7 @@ export default function FullWidthGrid() {
           <Grid item xs={12} sm={4}>
             <Paper className={classes.paper}>
               <h4>Saving Throws</h4>
-              <div>str</div>
-              <div>dex</div>
-              <div>Const</div>
-              <div>Intel</div>
-              <div>Wis</div>
-              <div>Char</div>
+              <CharSavingThrows />
             </Paper>
           </Grid>
 
