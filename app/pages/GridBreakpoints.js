@@ -93,7 +93,14 @@ export default function FullWidthGrid() {
           <Grid item xs={8} sm={3}>
             <Paper className={classes.paper}>
               <h4>Skills</h4>
-              <CharAttributes />
+              <CharSkills />
+            </Paper>
+          </Grid>
+
+          <Grid item xs={12} sm={4}>
+            <Paper className={classes.paper}>
+              <h4>Saving Throws</h4>
+              <CharSavingThrows />
             </Paper>
           </Grid>
 
@@ -120,8 +127,12 @@ export default function FullWidthGrid() {
 
           <Grid item xs={12} sm={4}>
             <Paper className={classes.paper}>
-              <h4>Saving Throws</h4>
-              <CharSavingThrows />
+              <h4>Equipment</h4>
+              <div>CP</div>
+              <div>SP</div>
+              <div>EP</div>
+              <div>GP</div>
+              <div>PP</div>
             </Paper>
           </Grid>
 
@@ -129,25 +140,8 @@ export default function FullWidthGrid() {
             <Paper className={classes.paper}>Inspiration</Paper>
             <Paper className={classes.paper}>Proficiency Bonus</Paper>
             <Paper className={classes.paper}>Passive Wisdom (Perception)</Paper>
-          </Grid>
-
-          <Grid item xs={12} sm={4}>
-            <Paper className={classes.paper}>
-              <div>Passive Wisdom (Perception)</div>
-            </Paper>
             <Paper className={classes.paper}>
               <div>Other Profs & Languages notes section</div>
-            </Paper>
-          </Grid>
-
-          <Grid item xs={12} sm={4}>
-            <Paper className={classes.paper}>
-              <h4>Equipment</h4>
-              <div>CP</div>
-              <div>SP</div>
-              <div>EP</div>
-              <div>GP</div>
-              <div>PP</div>
             </Paper>
           </Grid>
 
