@@ -31,9 +31,7 @@ const CharAttributes = () => {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <Typography variant="subtitle1" gutterBottom>
-        Attributes
-      </Typography>
+      <h4>Attributes</h4>
       <Divider className={classes.divider} />
       <Grid container spacing={3}>
         <FormControl>
