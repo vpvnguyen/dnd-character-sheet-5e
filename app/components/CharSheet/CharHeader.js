@@ -2,9 +2,6 @@ import React, { useState } from "react";
 import {
   makeStyles,
   Grid,
-  Paper,
-  Typography,
-  Divider,
   InputLabel,
   Input,
   FormControl,
@@ -119,12 +116,6 @@ const CharHeader = () => {
 
   return (
     <React.Fragment>
-      <Typography variant="subtitle1" gutterBottom>
-        Character Sheet 5e
-      </Typography>
-
-      <Divider className={classes.divider} />
-
       <Grid container spacing={3}>
         <Grid item xs>
           <FormControl>
