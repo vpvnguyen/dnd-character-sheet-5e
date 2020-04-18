@@ -84,40 +84,75 @@ export default function FullWidthGrid() {
             </Paper>
           </Grid>
 
-          <Grid item xs={4} sm={3}>
+          <Grid item xs={4} sm={2}>
             <Paper className={classes.paper}>
               <CharAttributes />
             </Paper>
           </Grid>
 
-          <Grid item xs={8} sm={3}>
+          <Grid item xs={8} sm={5}>
             <Paper className={classes.paper}>
               <h4>Skills</h4>
               <CharSkills />
             </Paper>
           </Grid>
 
-          <Grid item xs={12} sm={4}>
+          <Grid item xs={12} sm={5}>
             <Paper className={classes.paper}>
               <h4>Saving Throws</h4>
               <CharSavingThrows />
             </Paper>
           </Grid>
 
-          <Grid item xs={12} sm={6}>
+          <Grid item xs={12} sm={7}>
             <Paper className={classes.paper}>
               <h4>Primary</h4>
-              <div>Armor Class</div>
-              <div>Initiative</div>
-              <div>Speed</div>
-              <div>HP</div>
-              <div>Temp HP</div>
-              <div>Hit Dice</div>
-              <div>Death Saves</div>
+              <Grid
+                item
+                container
+                direction="row"
+                justify="center"
+                alignItems="stretch"
+                xs={12}
+              >
+                <Grid item xs={4}>
+                  <Paper className={classes.paper}>Armor Class</Paper>
+                </Grid>
+                <Grid item xs={4}>
+                  <Paper className={classes.paper}>Initiative</Paper>
+                </Grid>
+                <Grid item xs={4}>
+                  <Paper className={classes.paper}>Speed</Paper>
+                </Grid>
+              </Grid>
+
+              <Grid item xs={12}>
+                <Paper className={classes.paper}>HP</Paper>
+              </Grid>
+
+              <Grid item xs={12}>
+                <Paper className={classes.paper}>Temp HP</Paper>
+              </Grid>
+
+              <Grid
+                item
+                container
+                direction="row"
+                justify="center"
+                alignItems="stretch"
+                xs={12}
+              >
+                <Grid item xs={6}>
+                  <Paper className={classes.paper}>Hit Dice</Paper>
+                </Grid>
+                <Grid item xs={6}>
+                  <Paper className={classes.paper}>Death Saves</Paper>
+                </Grid>
+              </Grid>
             </Paper>
           </Grid>
 
-          <Grid item xs={12} sm={4}>
+          <Grid item xs={12} sm={5}>
             <Paper className={classes.paper}>
               <h4>Attacks and Spellcasting</h4>
               <div>Name | ATK Bonus | Damage/Type</div>
