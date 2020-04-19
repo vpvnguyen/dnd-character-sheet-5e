@@ -89,37 +89,7 @@ const SignIn = () => {
             >
               Sign In
             </Button>
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              color="primary"
-              className={classes.submit}
-              href="/SheetMockLayout" //  REPLACE WITH AUTH
-            >
-              Layout
-            </Button>
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              color="primary"
-              className={classes.submit}
-              href="/NestedGrid" //  REPLACE WITH AUTH
-            >
-              NestedGrid
-            </Button>
 
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              color="primary"
-              className={classes.submit}
-              href="/AutoLayout" //  REPLACE WITH AUTH
-            >
-              AutoLayout
-            </Button>
             <Button
               type="submit"
               fullWidth
