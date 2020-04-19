@@ -100,6 +100,18 @@ const SignIn = () => {
             >
               GridBreakpoints
             </Button>
+
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              color="primary"
+              className={classes.submit}
+              href="/SheetMockLayout" //  REPLACE WITH AUTH
+            >
+              Mock Mobile Layout
+            </Button>
+
             <Grid container>
               <Grid item xs>
                 <Link href="#" variant="body2">
