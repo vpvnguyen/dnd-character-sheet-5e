@@ -16,6 +16,9 @@ import CharTraits from "../components/CharSheet/CharTraits";
 import CharEquip from "../components/CharSheet/CharEquip";
 import CharFeats from "../components/CharSheet/CharFeats";
 
+// test
+import CharHP2 from "../components/CharSheet/CharHP2";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -26,50 +29,6 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.secondary,
   },
 }));
-
-// create filters for each component
-const charSelected = [
-  {
-    name: "Header",
-    component: <CharHeader />,
-    checked: true,
-  },
-  {
-    name: "Stats",
-    component: <CharAttributes />,
-    checked: true,
-  },
-  {
-    name: "HP",
-    component: <CharHP />,
-    checked: true,
-  },
-  {
-    name: "ATK",
-    component: <CharAtk />,
-    checked: true,
-  },
-  {
-    name: "Prof",
-    component: <CharProf />,
-    checked: true,
-  },
-  {
-    name: "Traits",
-    component: <CharTraits />,
-    checked: true,
-  },
-  {
-    name: "Equip",
-    component: <CharEquip />,
-    checked: true,
-  },
-  {
-    name: "Feats",
-    component: <CharFeats />,
-    checked: true,
-  },
-];
 
 export default function FullWidthGrid() {
   const classes = useStyles();
@@ -104,6 +63,7 @@ export default function FullWidthGrid() {
             </Paper>
           </Grid>
 
+          {/* HP */}
           <Grid item xs={12} sm={7}>
             <Paper className={classes.paper}>
               <h4>Primary</h4>
@@ -149,6 +109,14 @@ export default function FullWidthGrid() {
                   <Paper className={classes.paper}>Death Saves</Paper>
                 </Grid>
               </Grid>
+            </Paper>
+          </Grid>
+
+          {/* HP */}
+          <Grid item xs={12} sm={7}>
+            <Paper className={classes.paper}>
+              <h4>Primary</h4>
+              <CharHP2 />
             </Paper>
           </Grid>
 
