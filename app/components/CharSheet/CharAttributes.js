@@ -4,7 +4,6 @@ import {
   Grid,
   Divider,
   FormControl,
-  Typography,
   TextField,
 } from "@material-ui/core";
 
@@ -29,6 +28,9 @@ const useStyles = makeStyles((theme) => ({
 
 const CharAttributes = () => {
   const classes = useStyles();
+
+  const [str, setStr] = useState(0);
+
   return (
     <React.Fragment>
       <h4>Attributes</h4>
